@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Password Generator </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="title">Password Generator</h2>
+            <div class="result">
+                <div class="length">
+                    <h6>Password length </h6> <output id="value"></output>
+                </div>
+                <div class="box slider">
+                    <p>4</p><input type="range" class="form-range" min="4" max="16" id="customRange" step="1"><p>16</p>          
+                </div>
+            </div>
+                    <div class="settings">
+                        <h6>Settings</h6>
+                        <div class="form-check form-switch box">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Includes lowercase</label>
+                            <input class="form-check-input checkbox" type="checkbox" role="switch" id="lowercase">
+                        </div>
+                        <div class="form-check form-switch box">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Includes uppercase</label>
+                            <input class="form-check-input checkbox" type="checkbox" role="switch" id="uppercase">
+                        </div>
+                        <div class="form-check form-switch box">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Includes numbers</label>
+                            <input class="form-check-input checkbox" type="checkbox" role="switch" id="numbers">
+                        </div>
+                        <div class="form-check form-switch box">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Includes symbols</label>
+                            <input class="form-check-input checkbox" type="checkbox" role="switch" id="symbols">
+                      </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary generator-button" type="button">Generate Password</button>
+                </div>
+                <div class="generator box">
+                    <h5 id="generatedResult">Generate your password</h5>
+                    <div class="popup">
+                        <i class="fas fa-clipboard popup"></i>
+                        <span class="popuptext" id="myPopup">Copied</span>
+                    </div>
+                </div>
+            </div>
+        <script src="https://kit.fontawesome.com/3225450364.js" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

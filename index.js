@@ -1,13 +1,14 @@
 const value = document.querySelector("#value");
 const input = document.querySelector("#customRange");
+let passwordLenght = input.value;
 value.textContent = input.value
 input.addEventListener("input", (e) => {
+    passwordLenght = e.target.value
     value.textContent = e.target.value
 })
 
 const result = document.querySelector("#generatedResult")
 const buttonGenerator = document.querySelector(".generator-button");
-const passwordLenght = value.textContent;
 const hasLower = document.getElementById("lowercase");
 const hasUpper = document.getElementById("uppercase");
 const hasNumber = document.getElementById("numbers");
@@ -33,7 +34,7 @@ buttonGenerator.addEventListener("click", () => {
 
 const copySymbol = document.getElementsByClassName("fas");
 copySymbol[0].addEventListener("click", () => {
-    var popup = document.getElementById("myPopup");
+    popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
     if(popup.classList.contains("show")) 
         setTimeout(() => popup.classList.remove("show"), 500) 
